@@ -37,7 +37,7 @@ RUN	git clone https://github.com/geminigeek/multi-tor-tunnel multitor && \
   mkdir -p /var/log/multitor/privoxy/ && \
   mkdir -p /var/log/polipo/ && \
 # let haproxy listen from outside, instand only in the docker container
-  sed -i s/127.0.0.1:16379/0.0.0.0:16379/g templates/haproxy-template.cfg
+  #sed -i s/127.0.0.1:16379/0.0.0.0:16379/g templates/haproxy-template.cfg
 
 COPY startup.sh /multitor/
 RUN chmod +x /multitor/startup.sh
