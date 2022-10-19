@@ -1,0 +1,13 @@
+get into folder where docker file is 
+
+# make docker image we will use 
+
+docker build -t multitor-orig-polipo-exposed-ha .
+
+
+#then run like this 
+
+#used ram for 75  1.6 gb ram 
+# make sure to open enough ports 
+# make sure to bind ports to 127.0.0.1 localhost
+docker run -d -e "TOR_INSTANCES=75" -p 15379-15479:15379-15479 -p 16379:16379  -p 16380:16380 multitor-orig-polipo-exposed-ha

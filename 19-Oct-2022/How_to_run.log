@@ -1,0 +1,4 @@
+docker run --rm -e "TOR_INSTANCES=5" -p 15379-15479:15379-15479 -p 16379:16379  -p 16380:16380 multitor-orig-polipo-exposed-ha
+
+1.6 gb ram
+docker run -d -e "TOR_INSTANCES=75" -p 15379-15479:15379-15479 -p 16379:16379  -p 16380:16380 multitor-orig-polipo-exposed-ha
